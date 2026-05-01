@@ -45,42 +45,6 @@ int main(){
         }
     }
 
-    /*
-    string res="";
-    char m[10]={-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
-    bool flag=false;
-    bool wend=true;
-    do{
-        if(flag)
-        {
-            res="";
-            for(int i=0;i<password_length;i++)
-            {
-                if(m[i]>=0)
-                    res=res+SYMBOLS[m[i]];
-                else break;
-            }
-            flag=false;
-        }else res[0]=SYMBOLS[m[0]];
-        if(res==password)
-        {
-            cout << res << endl;
-            return 0;
-        }
-        for(int i=0;i<=password_length;i++)
-        {
-            if(i==password_length)
-            {
-                wend=false;
-                break;
-            }
-            m[i]=m[i]+1;
-            if(m[i]<SYMBOL_COUNT)break;
-            m[i]=0;
-            flag=true;
-        }
-    }while(wend);
-    */
     cout << "Password Not Found... like Oleg//\n good luck" << endl;
     return 1;
 }
