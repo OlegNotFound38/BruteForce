@@ -5,7 +5,7 @@
 using namespace std;
 
 int main(){
-    system("color 0A")
+    system("color 0A");
     const string SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"; // ⁡⁢⁢⁢posible symbols⁡ ⁡⁢⁢⁣now 62⁡
     const int SYMBOL_COUNT = SYMBOLS.length();
     
@@ -22,10 +22,11 @@ int main(){
     string password = "A";
 
     while (password_index[password_length] == -1){
-        cout << password << "\t\t";
+        cout << password << "\t";
 
         if (password==correct_password){
-            cout << password << endl;
+            system(cls);
+            cout << "Password: " << password << endl;
             return 0;
         }
 
