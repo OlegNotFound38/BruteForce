@@ -25,8 +25,7 @@ int main(){
         cout << password << "\t";
 
         if (password==correct_password){
-            system(cls);
-            cout << "Password: " << password << endl;
+            cout << endl << endl << "Password: " << password << endl;
             cin.get();
             return 0;
         }
