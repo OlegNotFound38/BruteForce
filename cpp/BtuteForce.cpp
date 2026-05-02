@@ -12,14 +12,17 @@ int main(){
 
     const short max_password_length = 100; // ⁡⁢⁢⁢max posible password length, what user can enter ⁡⁣⁢⁢on 12th code str⁡ ⁡⁢⁢⁣now 100⁡
     short password_index[max_password_length];
-    for (int i = 0; i < password_length; i++){
+
+    for (int i = 0; i <= password_length; ++i){
         password_index[i] = -1;
     }
 
     string password = "A";
 
     while (password_index[password_length] == -1){
-        if (password == correct_password){
+        cout << password << "\t\t";
+
+        if (password==correct_password){
             cout << password << endl;
             return 0;
         }
@@ -27,21 +30,18 @@ int main(){
         for (int i = 0; i < password_length; i++){
             password_index[i]++;
             if (password_index[i] < SYMBOL_COUNT){
-                password[0] = SYMBOLS[password_index[0]];
+                password[i] = SYMBOLS[password_index[i]];
                 break;
             }
             //⁡⁢⁣⁣else⁡
             password_index[i] = 0;
-            password[i] = SYMBOLS[password_index[i]];
+            password[i] = 'A';
 
             if (password_index[i+1] == -1){
                 password_index[i+1] = 0;
                 password += "A";
                 break;
             }
-            //⁡⁢⁣⁣else⁡
-            password_index[i+1]++;
-            password[i+1] = SYMBOLS[password_index[i+1]];
         }
     }
 
