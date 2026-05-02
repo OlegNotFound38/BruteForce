@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 using namespace std;
 
 int main(){
+    system("color 0A")
     const string SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"; // ⁡⁢⁢⁢posible symbols⁡ ⁡⁢⁢⁣now 62⁡
     const int SYMBOL_COUNT = SYMBOLS.length();
     
