@@ -27,6 +27,7 @@ int main(){
         if (password==correct_password){
             system(cls);
             cout << "Password: " << password << endl;
+            cin.get();
             return 0;
         }
 
@@ -50,8 +51,8 @@ int main(){
 
     if (correct_password == ""){
         cout << "Ты пароль почему не ввел?\n";
-        return 0;
     }
     cout << "Password Not Found... like Oleg//\n good luck" << endl;
+    cin.get();
     return 1;
 }
