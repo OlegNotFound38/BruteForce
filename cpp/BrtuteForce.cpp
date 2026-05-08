@@ -12,8 +12,7 @@ int main(){
     cout << "Enter Password:\n"; string correct_password; cin >> correct_password; // ⁡⁢⁢⁢The password that we will find⁡
     cout << "Enter the maximum password length:\n"; int password_length; cin >> password_length; // ⁡⁣⁢⁢here⁡
 
-    const short max_password_length = 100; // ⁡⁢⁢⁢max posible password length, what user can enter ⁡⁣⁢⁢on 12th code str⁡ ⁡⁢⁢⁣now 100⁡
-    short password_index[max_password_length];
+    short *password_index = new short[++password_length];
 
     for (int i = 0; i <= password_length; ++i){
         password_index[i] = -1;
@@ -26,6 +25,9 @@ int main(){
 
         if (password==correct_password){
             cout << endl << endl << "Password: " << password << endl;
+
+            delete [] password_index;
+
             cin.get();
             return 0;
         }
@@ -52,6 +54,9 @@ int main(){
         cout << "Ты пароль почему не ввел?\n";
     }
     cout << "Password Not Found... like Oleg//\n good luck" << endl;
+
+    delete [] password_index;
+
     cin.get();
     return 1;
 }
